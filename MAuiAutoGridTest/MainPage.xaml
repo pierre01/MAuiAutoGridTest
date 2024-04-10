@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MAuiAutoGridTest.MainPage" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Grid
+
+                Background="LightPink"
+                ColumnDefinitions="1*,50,Auto,3*,1*"
+                ColumnSpacing="2" HeightRequest="300">
+                <RoundRectangle
+                    CornerRadius="6" Fill="Red"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
+                <RoundRectangle
+                    Grid.Column="1" CornerRadius="6"
+                    Fill="Red" HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
+                <!--Comment out the RoundRectangle below to see the difference-->
+                <RoundRectangle
+                    Grid.Column="2" CornerRadius="6"
+                    Fill="blue" 
+                     />
+                <!--<Rectangle
+                    Grid.Column="2" 
+                    Fill="blue" 
+                     />-->
+                <RoundRectangle
+                    Grid.Column="3" CornerRadius="6"
+                    Fill="Red" HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
+                <RoundRectangle
+                    Grid.Column="4" CornerRadius="6"
+                    Fill="Red" HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
